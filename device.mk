@@ -34,7 +34,7 @@ PRODUCT_PACKAGES += \
     xiaomi_ugglite_overlay
 
 # Permissions
-PRODUCT_COPY_FILES += \
+NO_PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_fingerprint/android.hardware.fingerprint.xml
 
 # Audio
@@ -45,18 +45,18 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/blank.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_config.xml
 
-PRODUCT_PACKAGES += \
+NO_PRODUCT_PACKAGES += \
     camera.land \
     camera.ulysse \
     camera.wingtech
 
 # Fingerprint
-PRODUCT_PACKAGES += \
+NO_PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_landtoni \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_ulysse
 
 # Flashlight (prada)
-PRODUCT_PACKAGES += \
+NO_PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.xiaomi_prada_flashlight
 
 # Input
@@ -100,4 +100,4 @@ PRODUCT_PACKAGES += \
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/Mi8937_4_19/Mi8937_4_19-vendor.mk)
-$(call inherit-product-if-exists, vendor/xiaomi/Mi8937-2/Mi8937-vendor.mk)
+#$(call inherit-product-if-exists, vendor/xiaomi/Mi8937-2/Mi8937-vendor.mk)
