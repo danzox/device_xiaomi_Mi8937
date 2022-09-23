@@ -16,10 +16,10 @@ $(foreach p, $(call to-upper, $(ALL_PARTITIONS)), \
 # Inherit from common mithorium-common
 include device/xiaomi/mithorium-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/xiaomi/Mi8937
+DEVICE_PATH := device/xiaomi/Mi8937_4_19
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := mi8937,landtoni,land,santoni,prada,ulova,ulysse,ugglite,ugg,rova,rolex,riva,Mi8937
+TARGET_OTA_ASSERT_DEVICE := mi8937,landtoni,land,santoni,prada,ulova,ulysse,ugglite,ugg,rova,rolex,riva,Mi8937,Mi8937_4_19
 
 # Camera
 MI8937_CAM_USE_RENAMED_BLOBS_L := true
@@ -37,8 +37,8 @@ TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_mi8937
 
 # Kernel
 BOARD_KERNEL_CMDLINE += androidboot.android_dt_dir=/non-existent androidboot.boot_devices=soc/7824900.sdhci
-TARGET_KERNEL_CONFIG := mi8937_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
+TARGET_KERNEL_CONFIG := vendor/mi8937_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937-4.19
 
 # Partitions
 BOARD_USES_METADATA_PARTITION := true
@@ -89,4 +89,4 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/biometrics/sepolicy
 
 # Inherit from the proprietary version
-include vendor/xiaomi/Mi8937/BoardConfigVendor.mk
+include vendor/xiaomi/Mi8937_4_19/BoardConfigVendor.mk

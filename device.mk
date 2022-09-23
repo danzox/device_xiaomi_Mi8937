@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Kernel
+TARGET_KERNEL_VERSION := 4.19
+
 # Inherit from mithorium-common
 $(call inherit-product, device/xiaomi/mithorium-common/mithorium.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
@@ -96,5 +99,5 @@ PRODUCT_PACKAGES += \
     WifiOverlay_prada
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/xiaomi/Mi8937/Mi8937-vendor.mk)
+$(call inherit-product, vendor/xiaomi/Mi8937_4_19/Mi8937_4_19-vendor.mk)
 $(call inherit-product-if-exists, vendor/xiaomi/Mi8937-2/Mi8937-vendor.mk)
